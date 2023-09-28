@@ -53,8 +53,6 @@ func Test_RepositoryActivities_RegisterActivities(t *testing.T) {
 			sqlmock.AnyArg(),
 			sqlmock.AnyArg(),
 			sqlmock.AnyArg(),
-			sqlmock.AnyArg(),
-			sqlmock.AnyArg(),
 		).WillReturnResult(sqlmock.NewResult(1, 1))
 		mock.ExpectCommit()
 
@@ -69,8 +67,6 @@ func Test_RepositoryActivities_RegisterActivities(t *testing.T) {
 	t.Run("Error", func(t *testing.T) {
 		mock.ExpectBegin()
 		mock.ExpectQuery("INSERT INTO `categories` (.+) VALUES (.+)").WithArgs(
-			sqlmock.AnyArg(),
-			sqlmock.AnyArg(),
 			sqlmock.AnyArg(),
 			sqlmock.AnyArg(),
 			sqlmock.AnyArg(),
