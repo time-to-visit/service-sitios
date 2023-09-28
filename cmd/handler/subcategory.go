@@ -10,7 +10,7 @@ import (
 
 func NewHandlerSubCategory(e *echo.Echo, subCategoryCaseUse usecase.SubCategoryUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	subCategoryEntry := entry.NewSubcategoryEntry(subCategoryCaseUse)
-	e.POST("/subcategory", subCategoryEntry.InsertSubcategory, auth, validator.ValidateSubCategory)
-	e.DELETE("/subcategory/:IDCATEGORY/:IDSUBCATEGORY", subCategoryEntry.DeleteCategory, auth)
+	e.POST("/sites/subcategory", subCategoryEntry.InsertSubcategory, auth, validator.ValidateSubCategory)
+	e.DELETE("/sites/subcategory/:IDCATEGORY/:IDSUBCATEGORY", subCategoryEntry.DeleteCategory, auth)
 	return e
 }

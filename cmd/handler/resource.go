@@ -10,7 +10,7 @@ import (
 
 func NewHandlerResource(e *echo.Echo, ResourceCaseUse usecase.ResourceUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	resourceEntry := entry.NewResourceEntry(ResourceCaseUse)
-	e.POST("/resource", resourceEntry.AddResource, auth, validator.ValidateResource)
-	e.DELETE("/resource/:IDSITES/:IDRESOURCE", resourceEntry.DeleteResource, auth)
+	e.POST("/sites/resource", resourceEntry.AddResource, auth, validator.ValidateResource)
+	e.DELETE("/sites/resource/:IDSITES/:IDRESOURCE", resourceEntry.DeleteResource, auth)
 	return e
 }

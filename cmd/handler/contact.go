@@ -10,7 +10,7 @@ import (
 
 func NewHandlerContact(e *echo.Echo, ContactCaseUse usecase.ContactUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	contactEntry := entry.NewConcatEntry(ContactCaseUse)
-	e.POST("/contact", contactEntry.InsertContact, auth, validator.ValidateContact)
-	e.DELETE("/contact/:IDSITES/:IDCONTACT", contactEntry.DeleteContact, auth)
+	e.POST("/sites/contact", contactEntry.InsertContact, auth, validator.ValidateContact)
+	e.DELETE("/sites/contact/:IDSITES/:IDCONTACT", contactEntry.DeleteContact, auth)
 	return e
 }

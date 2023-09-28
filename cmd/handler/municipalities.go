@@ -10,8 +10,8 @@ import (
 
 func NewHandlerMunicipalities(e *echo.Echo, MunicipalitiesCaseUse usecase.MunicipalitiesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	municipalitiesEntry := entry.NewMunicipalitiesEntry(MunicipalitiesCaseUse)
-	e.GET("/municipalities/:ID", municipalitiesEntry.SeeMuncipalities, auth)
-	e.POST("/municipalities", municipalitiesEntry.InsertMuncipalities, auth, validator.ValidateMunicipalities)
-	e.DELETE("/municipalities/:ID", municipalitiesEntry.DeleteMuncipalities, auth)
+	e.GET("/sites/municipalities/:ID", municipalitiesEntry.SeeMuncipalities, auth)
+	e.POST("/sites/municipalities", municipalitiesEntry.InsertMuncipalities, auth, validator.ValidateMunicipalities)
+	e.DELETE("/sites/municipalities/:ID", municipalitiesEntry.DeleteMuncipalities, auth)
 	return e
 }
