@@ -1,7 +1,6 @@
 package validator
 
 import (
-	"fmt"
 	"net/http"
 	"service-sites/internal/domain/entity"
 	objectValues "service-sites/internal/domain/object_values"
@@ -21,7 +20,6 @@ func ValidateReview(next echo.HandlerFunc) echo.HandlerFunc {
 			errs := err.(validatorV.ValidationErrors)
 			return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
 		}
-		fmt.Println(auth)
 		review.UserId = int(auth.Data.ID)
 		review.UserNombre = auth.Data.Nombres
 		c.Set("review", review)

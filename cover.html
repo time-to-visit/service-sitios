@@ -1,0 +1,3469 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>entry: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">service-sites/cmd/entry/category.go (6.7%)</option>
+				
+				<option value="file1">service-sites/cmd/entry/contact.go (11.1%)</option>
+				
+				<option value="file2">service-sites/cmd/entry/deparment.go (10.0%)</option>
+				
+				<option value="file3">service-sites/cmd/entry/municipalities.go (8.3%)</option>
+				
+				<option value="file4">service-sites/cmd/entry/resource.go (12.5%)</option>
+				
+				<option value="file5">service-sites/cmd/entry/review.go (9.1%)</option>
+				
+				<option value="file6">service-sites/cmd/entry/sites.go (7.7%)</option>
+				
+				<option value="file7">service-sites/cmd/entry/subcategory.go (12.5%)</option>
+				
+				<option value="file8">service-sites/cmd/handler/category.go (100.0%)</option>
+				
+				<option value="file9">service-sites/cmd/handler/contact.go (100.0%)</option>
+				
+				<option value="file10">service-sites/cmd/handler/deparment.go (100.0%)</option>
+				
+				<option value="file11">service-sites/cmd/handler/municipalities.go (100.0%)</option>
+				
+				<option value="file12">service-sites/cmd/handler/resource.go (100.0%)</option>
+				
+				<option value="file13">service-sites/cmd/handler/review.go (100.0%)</option>
+				
+				<option value="file14">service-sites/cmd/handler/sites.go (100.0%)</option>
+				
+				<option value="file15">service-sites/cmd/handler/subcategory.go (100.0%)</option>
+				
+				<option value="file16">service-sites/internal/domain/entity/category.go (66.7%)</option>
+				
+				<option value="file17">service-sites/internal/domain/entity/contact.go (66.7%)</option>
+				
+				<option value="file18">service-sites/internal/domain/entity/department.go (66.7%)</option>
+				
+				<option value="file19">service-sites/internal/domain/entity/municipalities.go (66.7%)</option>
+				
+				<option value="file20">service-sites/internal/domain/entity/resource.go (66.7%)</option>
+				
+				<option value="file21">service-sites/internal/domain/entity/review.go (60.0%)</option>
+				
+				<option value="file22">service-sites/internal/domain/entity/sites.go (66.7%)</option>
+				
+				<option value="file23">service-sites/internal/domain/entity/subcategory.go (66.7%)</option>
+				
+				<option value="file24">service-sites/internal/domain/object_values/response.go (100.0%)</option>
+				
+				<option value="file25">service-sites/internal/domain/repository/category.go (25.0%)</option>
+				
+				<option value="file26">service-sites/internal/domain/repository/contact.go (60.0%)</option>
+				
+				<option value="file27">service-sites/internal/domain/repository/deparment.go (30.0%)</option>
+				
+				<option value="file28">service-sites/internal/domain/repository/municipalities.go (30.0%)</option>
+				
+				<option value="file29">service-sites/internal/domain/repository/resource.go (27.3%)</option>
+				
+				<option value="file30">service-sites/internal/domain/repository/review.go (37.5%)</option>
+				
+				<option value="file31">service-sites/internal/domain/repository/sites.go (27.3%)</option>
+				
+				<option value="file32">service-sites/internal/domain/repository/subcategory.go (27.3%)</option>
+				
+				<option value="file33">service-sites/internal/domain/usecase/category.go (100.0%)</option>
+				
+				<option value="file34">service-sites/internal/domain/usecase/contact.go (100.0%)</option>
+				
+				<option value="file35">service-sites/internal/domain/usecase/department.go (100.0%)</option>
+				
+				<option value="file36">service-sites/internal/domain/usecase/municipalities.go (0.0%)</option>
+				
+				<option value="file37">service-sites/internal/domain/usecase/resource.go (0.0%)</option>
+				
+				<option value="file38">service-sites/internal/domain/usecase/review.go (0.0%)</option>
+				
+				<option value="file39">service-sites/internal/domain/usecase/sites.go (0.0%)</option>
+				
+				<option value="file40">service-sites/internal/domain/usecase/subcategory.go (0.0%)</option>
+				
+				<option value="file41">service-sites/internal/domain/utils/sql.go (0.0%)</option>
+				
+				<option value="file42">service-sites/internal/domain/utils/url.go (0.0%)</option>
+				
+				<option value="file43">service-sites/internal/domain/validator/cateogry.go (77.8%)</option>
+				
+				<option value="file44">service-sites/internal/domain/validator/contact.go (77.8%)</option>
+				
+				<option value="file45">service-sites/internal/domain/validator/department.go (77.8%)</option>
+				
+				<option value="file46">service-sites/internal/domain/validator/municipalities.go (77.8%)</option>
+				
+				<option value="file47">service-sites/internal/domain/validator/resource.go (77.8%)</option>
+				
+				<option value="file48">service-sites/internal/domain/validator/review.go (61.5%)</option>
+				
+				<option value="file49">service-sites/internal/domain/validator/sites.go (77.8%)</option>
+				
+				<option value="file50">service-sites/internal/domain/validator/subcategory.go (77.8%)</option>
+				
+				<option value="file51">service-sites/internal/infra/storage/storage.go (0.0%)</option>
+				
+				<option value="file52">service-sites/internal/infra/validation/client.go (86.7%)</option>
+				
+				<option value="file53">service-sites/internal/utils/decode_file.go (0.0%)</option>
+				
+				<option value="file54">service-sites/internal/utils/random_name.go (0.0%)</option>
+				
+				<option value="file55">service-sites/internal/utils/url_utils.go (50.0%)</option>
+				
+				<option value="file56">service-sites/mocks/ClientRest.go (0.0%)</option>
+				
+				<option value="file57">service-sites/mocks/IGCImageRepo.go (82.6%)</option>
+				
+				<option value="file58">service-sites/mocks/IRepositoryCategory.go (79.4%)</option>
+				
+				<option value="file59">service-sites/mocks/IRepositoryContact.go (83.3%)</option>
+				
+				<option value="file60">service-sites/mocks/IRepositoryDepartment.go (80.0%)</option>
+				
+				<option value="file61">service-sites/mocks/IRepositoryMunicipalities.go (0.0%)</option>
+				
+				<option value="file62">service-sites/mocks/IRepositoryResource.go (0.0%)</option>
+				
+				<option value="file63">service-sites/mocks/IRepositoryReview.go (0.0%)</option>
+				
+				<option value="file64">service-sites/mocks/IRepositorySites.go (0.0%)</option>
+				
+				<option value="file65">service-sites/mocks/IRepositorySubCategory.go (0.0%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">no coverage</span>
+				<span class="cov1">low coverage</span>
+				<span class="cov2">*</span>
+				<span class="cov3">*</span>
+				<span class="cov4">*</span>
+				<span class="cov5">*</span>
+				<span class="cov6">*</span>
+				<span class="cov7">*</span>
+				<span class="cov8">*</span>
+				<span class="cov9">*</span>
+				<span class="cov10">high coverage</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package entry
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        "service-sites/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type categoryEntry struct {
+        categoryCaseuse usecase.CategoryUseCase
+}
+
+func NewCategoryEntry(categoryCaseuse usecase.CategoryUseCase) *categoryEntry <span class="cov8" title="1">{
+        return &amp;categoryEntry{
+                categoryCaseuse,
+        }
+}</span>
+
+func (e *categoryEntry) SeeCategory(c echo.Context) error <span class="cov0" title="0">{
+        response, status := e.categoryCaseuse.SeeCategory()
+        return c.JSON(status, response)
+}</span>
+
+func (e *categoryEntry) UpdateCategory(c echo.Context) error <span class="cov0" title="0">{
+        category := c.Get("category").(*entity.Category)
+        response, status := e.categoryCaseuse.UpdateCategory(*category)
+        return c.JSON(status, response)
+}</span>
+
+func (e *categoryEntry) DeleteCategory(c echo.Context) error <span class="cov0" title="0">{
+        id := c.Param("ID")
+        idCategory, err := strconv.Atoi(id)
+        if err != nil </span><span class="cov0" title="0">{
+                return c.NoContent(http.StatusBadRequest)
+        }</span>
+        <span class="cov0" title="0">response, status := e.categoryCaseuse.DeleteCategory(c.Request().Context(), idCategory)
+        return c.JSON(status, response)</span>
+}
+
+func (e *categoryEntry) InsertCategory(c echo.Context) error <span class="cov0" title="0">{
+        category := c.Get("category").(*entity.Category)
+        response, status := e.categoryCaseuse.InsertCategory(c.Request().Context(), *category)
+        return c.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package entry
+
+import (
+        "service-sites/internal/domain/entity"
+        "service-sites/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type contactEntry struct {
+        contactCaseuse usecase.ContactUseCase
+}
+
+func NewConcatEntry(contactCaseuse usecase.ContactUseCase) *contactEntry <span class="cov8" title="1">{
+        return &amp;contactEntry{
+                contactCaseuse,
+        }
+}</span>
+
+func (e *contactEntry) DeleteContact(c echo.Context) error <span class="cov0" title="0">{
+        c.Param("ID")
+        idSites, _ := strconv.Atoi(c.Param("IDSITES"))
+        idContact, _ := strconv.Atoi(c.Param("IDCONTACT"))
+        response, status := e.contactCaseuse.DeleteContact(idSites, idContact)
+        return c.JSON(status, response)
+}</span>
+
+func (e *contactEntry) InsertContact(c echo.Context) error <span class="cov0" title="0">{
+        contact := c.Get("contact").(*entity.Contact)
+        response, status := e.contactCaseuse.InsertContact(*contact)
+        return c.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">package entry
+
+import (
+        "service-sites/internal/domain/entity"
+        "service-sites/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type deparmentEntry struct {
+        deparmentCaseuse usecase.DepartmentUseCase
+}
+
+func NewDepartmentEntry(deparmentCaseuse usecase.DepartmentUseCase) *deparmentEntry <span class="cov8" title="1">{
+        return &amp;deparmentEntry{
+                deparmentCaseuse,
+        }
+}</span>
+
+func (e *deparmentEntry) SeeDeparment(c echo.Context) error <span class="cov0" title="0">{
+        response, status := e.deparmentCaseuse.SeeDeparment()
+        return c.JSON(status, response)
+}</span>
+
+func (e *deparmentEntry) InsertDeparment(c echo.Context) error <span class="cov0" title="0">{
+        department := c.Get("department").(*entity.Department)
+        response, status := e.deparmentCaseuse.InsertDeparment(c.Request().Context(), *department)
+        return c.JSON(status, response)
+}</span>
+
+func (e *deparmentEntry) DeleteDeparment(c echo.Context) error <span class="cov0" title="0">{
+        id := c.Param("ID")
+        idDepartment, _ := strconv.Atoi(id)
+        response, status := e.deparmentCaseuse.DeleteDeparment(c.Request().Context(), idDepartment)
+        return c.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">package entry
+
+import (
+        "service-sites/internal/domain/entity"
+        "service-sites/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type municipalitiesEntry struct {
+        municipalitiesCaseuse usecase.MunicipalitiesUseCase
+}
+
+func NewMunicipalitiesEntry(municipalitiesCaseuse usecase.MunicipalitiesUseCase) *municipalitiesEntry <span class="cov8" title="1">{
+        return &amp;municipalitiesEntry{
+                municipalitiesCaseuse,
+        }
+}</span>
+
+func (e *municipalitiesEntry) SeeMuncipalities(c echo.Context) error <span class="cov0" title="0">{
+        id := c.Param("ID")
+        idDepartment, _ := strconv.Atoi(id)
+        response, status := e.municipalitiesCaseuse.SeeMuncipalities(idDepartment)
+        return c.JSON(status, response)
+}</span>
+
+func (e *municipalitiesEntry) InsertMuncipalities(c echo.Context) error <span class="cov0" title="0">{
+        muncipalities := c.Get("municipalities").(*entity.Municipalities)
+        response, status := e.municipalitiesCaseuse.InsertMuncipalities(c.Request().Context(), *muncipalities)
+        return c.JSON(status, response)
+}</span>
+
+func (e *municipalitiesEntry) DeleteMuncipalities(c echo.Context) error <span class="cov0" title="0">{
+        id := c.Param("ID")
+        idMunicipalities, _ := strconv.Atoi(id)
+        response, status := e.municipalitiesCaseuse.DeleteMuncipalities(c.Request().Context(), idMunicipalities)
+        return c.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file4" style="display: none">package entry
+
+import (
+        "service-sites/internal/domain/entity"
+        "service-sites/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type resourceEntry struct {
+        resourceCaseuse usecase.ResourceUseCase
+}
+
+func NewResourceEntry(resourceCaseuse usecase.ResourceUseCase) *resourceEntry <span class="cov8" title="1">{
+        return &amp;resourceEntry{
+                resourceCaseuse,
+        }
+}</span>
+
+func (e *resourceEntry) AddResource(c echo.Context) error <span class="cov0" title="0">{
+        resource := c.Get("resource").(*entity.Resource)
+        response, status := e.resourceCaseuse.AddResource(c.Request().Context(), *resource)
+        return c.JSON(status, response)
+}</span>
+
+func (e *resourceEntry) DeleteResource(c echo.Context) error <span class="cov0" title="0">{
+        idSites, _ := strconv.Atoi(c.Param("IDSITES"))
+        idResource, _ := strconv.Atoi(c.Param("IDRESOURCE"))
+        response, status := e.resourceCaseuse.DeleteResource(c.Request().Context(), idSites, idResource)
+        return c.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file5" style="display: none">package entry
+
+import (
+        "service-sites/internal/domain/entity"
+        "service-sites/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type reviewEntry struct {
+        reviewCaseuse usecase.ReviewUseCase
+}
+
+func NewReviewEntry(reviewCaseuse usecase.ReviewUseCase) *reviewEntry <span class="cov8" title="1">{
+        return &amp;reviewEntry{
+                reviewCaseuse,
+        }
+}</span>
+
+func (e *reviewEntry) AddReview(c echo.Context) error <span class="cov0" title="0">{
+        review := c.Get("review").(*entity.Review)
+        response, status := e.reviewCaseuse.AddReview(*review)
+        return c.JSON(status, response)
+}</span>
+
+func (e *reviewEntry) DeleteReview(c echo.Context) error <span class="cov0" title="0">{
+        idSites, _ := strconv.Atoi(c.Param("IDSITES"))
+        idReview, _ := strconv.Atoi(c.Param("IDREVIEW"))
+        response, status := e.reviewCaseuse.DeleteReview(idSites, idReview)
+        return c.JSON(status, response)
+}</span>
+
+func (e *reviewEntry) SeeReview(c echo.Context) error <span class="cov0" title="0">{
+        idSites, _ := strconv.Atoi(c.Param("ID"))
+        response, status := e.reviewCaseuse.SeeReview(idSites)
+        return c.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file6" style="display: none">package entry
+
+import (
+        "service-sites/internal/domain/entity"
+        "service-sites/internal/domain/usecase"
+        "service-sites/internal/domain/utils"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type sitesEntry struct {
+        sitesCaseuse usecase.SitesUseCase
+}
+
+func NewSitesEntry(sitesCaseuse usecase.SitesUseCase) *sitesEntry <span class="cov8" title="1">{
+        return &amp;sitesEntry{
+                sitesCaseuse,
+        }
+}</span>
+
+func (e *sitesEntry) SeeSites(c echo.Context) error <span class="cov0" title="0">{
+        filter := utils.UrlValuesToMap(c.QueryParams())
+        response, status := e.sitesCaseuse.SeeSites(filter)
+        return c.JSON(status, response)
+}</span>
+
+func (e *sitesEntry) SeeOneSites(c echo.Context) error <span class="cov0" title="0">{
+        idSites, _ := strconv.Atoi(c.Param("ID"))
+        response, status := e.sitesCaseuse.SeeOneSites(idSites)
+        return c.JSON(status, response)
+}</span>
+
+func (e *sitesEntry) DeleteSites(c echo.Context) error <span class="cov0" title="0">{
+        idSites, _ := strconv.Atoi(c.Param("ID"))
+        response, status := e.sitesCaseuse.DeleteSites(idSites)
+        return c.JSON(status, response)
+}</span>
+
+func (e *sitesEntry) AddSites(c echo.Context) error <span class="cov0" title="0">{
+        sites := c.Get("sites").(*entity.Sites)
+        response, status := e.sitesCaseuse.AddSites(*sites)
+        return c.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file7" style="display: none">package entry
+
+import (
+        "service-sites/internal/domain/entity"
+        "service-sites/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type subcategoryEntry struct {
+        subcategoryCaseuse usecase.SubCategoryUseCase
+}
+
+func NewSubcategoryEntry(subcategoryCaseuse usecase.SubCategoryUseCase) *subcategoryEntry <span class="cov8" title="1">{
+        return &amp;subcategoryEntry{
+                subcategoryCaseuse,
+        }
+}</span>
+
+func (e *subcategoryEntry) InsertSubcategory(c echo.Context) error <span class="cov0" title="0">{
+        subCategory := c.Get("subCategory").(*entity.Subcategory)
+        response, status := e.subcategoryCaseuse.InsertSubcategory(c.Request().Context(), *subCategory)
+        return c.JSON(status, response)
+}</span>
+
+func (e *subcategoryEntry) DeleteCategory(c echo.Context) error <span class="cov0" title="0">{
+        idSubCategory, _ := strconv.Atoi(c.Param("IDSUBCATEGORY"))
+        idCategory, _ := strconv.Atoi(c.Param("IDCATEGORY"))
+        response, status := e.subcategoryCaseuse.DeleteSubCategory(c.Request().Context(), idCategory, idSubCategory)
+        return c.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file8" style="display: none">package handler
+
+import (
+        "service-sites/cmd/entry"
+        "service-sites/internal/domain/usecase"
+        "service-sites/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerCategory(e *echo.Echo, CategoryCaseUse usecase.CategoryUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        categoryEntry := entry.NewCategoryEntry(CategoryCaseUse)
+        e.GET("/category", categoryEntry.SeeCategory, auth)
+        e.DELETE("category/:ID", categoryEntry.DeleteCategory, auth)
+        e.POST("/category", categoryEntry.InsertCategory, auth, validator.ValidateCategory)
+        e.PUT("/category", categoryEntry.UpdateCategory, auth, validator.ValidateCategory)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file9" style="display: none">package handler
+
+import (
+        "service-sites/cmd/entry"
+        "service-sites/internal/domain/usecase"
+        "service-sites/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerContact(e *echo.Echo, ContactCaseUse usecase.ContactUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        contactEntry := entry.NewConcatEntry(ContactCaseUse)
+        e.POST("/contact", contactEntry.InsertContact, auth, validator.ValidateContact)
+        e.DELETE("/contact/:IDSITES/:IDCONTACT", contactEntry.DeleteContact, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file10" style="display: none">package handler
+
+import (
+        "service-sites/cmd/entry"
+        "service-sites/internal/domain/usecase"
+        "service-sites/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerDepartment(e *echo.Echo, DepartmentCaseUse usecase.DepartmentUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        departmentEntry := entry.NewDepartmentEntry(DepartmentCaseUse)
+        e.GET("/deparment", departmentEntry.SeeDeparment, auth)
+        e.POST("/deparment", departmentEntry.InsertDeparment, auth, validator.ValidateDepartment)
+        e.DELETE("/deparment/:ID", departmentEntry.DeleteDeparment, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file11" style="display: none">package handler
+
+import (
+        "service-sites/cmd/entry"
+        "service-sites/internal/domain/usecase"
+        "service-sites/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerMunicipalities(e *echo.Echo, MunicipalitiesCaseUse usecase.MunicipalitiesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        municipalitiesEntry := entry.NewMunicipalitiesEntry(MunicipalitiesCaseUse)
+        e.GET("/municipalities/:ID", municipalitiesEntry.SeeMuncipalities, auth)
+        e.POST("/municipalities", municipalitiesEntry.InsertMuncipalities, auth, validator.ValidateMunicipalities)
+        e.DELETE("/municipalities/:ID", municipalitiesEntry.DeleteMuncipalities, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file12" style="display: none">package handler
+
+import (
+        "service-sites/cmd/entry"
+        "service-sites/internal/domain/usecase"
+        "service-sites/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerResource(e *echo.Echo, ResourceCaseUse usecase.ResourceUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        resourceEntry := entry.NewResourceEntry(ResourceCaseUse)
+        e.POST("/resource", resourceEntry.AddResource, auth, validator.ValidateResource)
+        e.DELETE("/resource/:IDSITES/:IDRESOURCE", resourceEntry.DeleteResource, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file13" style="display: none">package handler
+
+import (
+        "service-sites/cmd/entry"
+        "service-sites/internal/domain/usecase"
+        "service-sites/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerReview(e *echo.Echo, ReviewCaseUse usecase.ReviewUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        reviewEntry := entry.NewReviewEntry(ReviewCaseUse)
+        e.GET("/review/:ID", reviewEntry.SeeReview, auth)
+        e.DELETE("/review/:IDSITES/:IDREVIEW", reviewEntry.DeleteReview, auth)
+        e.POST("/review", reviewEntry.AddReview, auth, validator.ValidateReview)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file14" style="display: none">package handler
+
+import (
+        "service-sites/cmd/entry"
+        "service-sites/internal/domain/usecase"
+        "service-sites/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerSites(e *echo.Echo, sitesCaseUse usecase.SitesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        sitesEntry := entry.NewSitesEntry(sitesCaseUse)
+        e.POST("/sites", sitesEntry.AddSites, auth, validator.ValidateSites)
+        e.GET("/sites", sitesEntry.SeeSites, auth)
+        e.DELETE("/sites/:ID", sitesEntry.DeleteSites, auth)
+        e.GET("/sites/:ID", sitesEntry.SeeOneSites, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file15" style="display: none">package handler
+
+import (
+        "service-sites/cmd/entry"
+        "service-sites/internal/domain/usecase"
+        "service-sites/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewHandlerSubCategory(e *echo.Echo, subCategoryCaseUse usecase.SubCategoryUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        subCategoryEntry := entry.NewSubcategoryEntry(subCategoryCaseUse)
+        e.POST("/subcategory", subCategoryEntry.InsertSubcategory, auth, validator.ValidateSubCategory)
+        e.DELETE("/subcategory/:IDCATEGORY/:IDSUBCATEGORY", subCategoryEntry.DeleteCategory, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file16" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Category struct {
+        Model
+        Nombre      string                       `gorm:"column:nombre;type:varchar(255);not null" json:"nombre" validate:"required"`
+        UrlImagen   string                       `gorm:"column:url_imagen;type:varchar(255);not null" json:"url_imagen"`
+        Descripcion string                       `gorm:"column:descripcion;type:varchar(255);not null" json:"descripcion" validate:"required"`
+        Estado      bool                         `gorm:"column:estado;type:boolean;not null" json:"estado" validate:"required"`
+        SubCategory []SubcategoryWihtoutValidate `json:"subcategories"`
+}
+
+type CategoryWithoutValidate struct {
+        Model
+        Nombre      string `gorm:"column:nombre;type:varchar(255);not null" json:"nombre"`
+        UrlImagen   string `gorm:"column:url_imagen;type:varchar(255);not null" json:"url_imagen"`
+        Descripcion string `gorm:"column:descripcion;type:varchar(255);not null" json:"descripcion"`
+        Estado      bool   `gorm:"column:estado;type:boolean;not null" json:"estado"`
+}
+
+func (r *CategoryWithoutValidate) TableName() string <span class="cov10" title="5">{
+        return "categories"
+}</span>
+
+func (m Category) BeforeCreate(tx *gorm.DB) (err error) <span class="cov4" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Category) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file17" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Contact struct {
+        Model
+        IsWp    bool                  `gorm:"column:is_wp;type:boolean;not null" json:"is_wp" validate:"required"`
+        Nombre  string                `gorm:"column:nombre;type:varchar(255);not null" json:"nombre" validate:"required"`
+        Numero  string                `gorm:"column:numero;type:varchar(255);not null" json:"numero" validate:"required"`
+        SitesId int                   `gorm:"column:sites_id;type:int(11);not null" json:"sites_id" validate:"required"`
+        Sites   *SitesWithoutValidate `gorm:"joinForeignKey:sites_id;foreignKey:id;references:SitesId" json:"sites,omitempty"`
+        Estado  bool                  `gorm:"column:estado;type:boolean;not null" json:"estado" validate:"required"`
+}
+
+type ContactWithoutValidate struct {
+        Model
+        IsWp    bool                  `gorm:"column:is_wp;type:boolean;not null" json:"is_wp"`
+        Nombre  string                `gorm:"column:nombre;type:varchar(255);not null" json:"nombre"`
+        Numero  string                `gorm:"column:numero;type:varchar(255);not null" json:"numero"`
+        SitesId int                   `gorm:"column:sites_id;type:int(11);not null" json:"sites_id"`
+        Sites   *SitesWithoutValidate `gorm:"joinForeignKey:sites_id;foreignKey:id;references:SitesId" json:"sites,omitempty"`
+        Estado  bool                  `gorm:"column:estado;type:boolean;not null" json:"estado"`
+}
+
+func (r *ContactWithoutValidate) TableName() string <span class="cov1" title="1">{
+        return "contacts"
+}</span>
+
+func (m Contact) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Contact) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file18" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Department struct {
+        Model
+        Nombre         string                          `gorm:"column:nombre;type:varchar(255);not null" json:"nombre" validate:"required"`
+        Bandera        string                          `gorm:"column:bandera;type:varchar(255);not null" json:"bandera" validate:"required"`
+        Estado         bool                            `gorm:"column:estado;type:boolean;not null" json:"estado" validate:"required"`
+        Municipalities []MunicipalitiesWithoutValidate ` json:"municipios"`
+}
+
+type DepartmentWithoutValidate struct {
+        Model
+        Nombre  string `gorm:"column:nombre;type:varchar(255);not null" json:"nombre"`
+        Bandera string `gorm:"column:bandera;type:varchar(255);not null" json:"bandera"`
+        Estado  bool   `gorm:"column:estado;type:boolean;not null" json:"estado"`
+}
+
+func (m DepartmentWithoutValidate) TableName() string <span class="cov1" title="1">{
+        return "departments"
+}</span>
+
+func (m Department) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Department) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file19" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Municipalities struct {
+        Model
+        Nombre       string                     `gorm:"column:nombre;type:varchar(255);not null" json:"nombre" validate:"required"`
+        Bandera      string                     `gorm:"column:bandera;type:varchar(255);not null" json:"bandera" validate:"required"`
+        Estado       bool                       `gorm:"column:estado;type:boolean;not null" json:"estado" validate:"required"`
+        DepartmentId int                        `gorm:"column:department_id;type:int(11);not null" json:"department_id" validate:"required"`
+        Department   *DepartmentWithoutValidate `gorm:"joinForeignKey:department_id;foreignKey:id;references:DepartmentId" json:"department,omitempty"`
+}
+
+type MunicipalitiesWithoutValidate struct {
+        Model
+        Nombre       string `gorm:"column:nombre;type:varchar(255);not null" json:"nombre" `
+        Bandera      string `gorm:"column:bandera;type:varchar(255);not null" json:"bandera" `
+        Estado       bool   `gorm:"column:estado;type:boolean;not null" json:"estado" `
+        DepartmentId int    `gorm:"column:department_id;type:int(11);not null" json:"_" `
+}
+
+func (r *MunicipalitiesWithoutValidate) TableName() string <span class="cov10" title="4">{
+        return "municipalities"
+}</span>
+
+func (m Municipalities) BeforeCreate(tx *gorm.DB) (err error) <span class="cov5" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Municipalities) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file20" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Resource struct {
+        Model
+        TypeRecursos string               `gorm:"column:type_recursos;type:varchar(255);not null" json:"type_resource" validate:"required"`
+        Payload      string               `gorm:"column:payload;type:varchar(255);not null" json:"payload" validate:"required"`
+        Estado       bool                 `gorm:"column:estado;type:boolean;not null" json:"estado" validate:"required"`
+        SitesId      int                  `gorm:"column:sites_id;type:int(11);not null" json:"sites_id" validate:"required"`
+        Sites        SitesWithoutValidate `gorm:"joinForeignKey:sites_id;foreignKey:id;references:SitesId"`
+}
+
+type ResourceWithoutValidate struct {
+        Model
+        TypeRecursos string `gorm:"column:type_recursos;type:varchar(255);not null" json:"type_resource"`
+        Payload      string `gorm:"column:payload;type:varchar(255);not null" json:"payload"`
+        Estado       bool   `gorm:"column:estado;type:boolean;not null" json:"estado" `
+        SitesId      int    `gorm:"column:sites_id;type:int(11);not null" json:"sites_id"`
+}
+
+func (res ResourceWithoutValidate) TableName() string <span class="cov1" title="1">{
+        return "resources"
+}</span>
+
+func (m Resource) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Resource) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file21" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Review struct {
+        Model
+        UserId        int    `gorm:"column:user_id;type:int(11);not null"  json:"user_id"`
+        UserNombre    string `gorm:"column:user_nombre;type:varchar(255);not null" json:"user_nombre"`
+        UrlImagenUser string `gorm:"column:url_imagen_user;type:varchar(255);not null" json:"url_imagen_user" `
+        Comment       string `gorm:"column:comment;type:varchar(255);not null" json:"comment" validate:"required"`
+        Valoracion    string `gorm:"column:valoracion;type:varchar(255);not null" json:"valoracion" validate:"required"`
+        SitesID       int    `gorm:"column:sites_id;type:varchar(255);not null" json:"sites_id" validate:"required"`
+}
+
+func (m Review) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Review) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file22" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Sites struct {
+        Model
+        CategoryID       int                            `gorm:"column:category_id;type:int(11);not null" json:"category_id" validate:"required"`
+        Category         *CategoryWithoutValidate       `gorm:"joinForeignKey:category_id;foreignKey:id;references:CategoryID" json:"category,omitempty"`
+        MunicipalitiesID int                            `gorm:"column:municipalities_id;type:int(11);not null" json:"municipalities_id" validate:"required"`
+        Municipalities   *MunicipalitiesWithoutValidate `gorm:"joinForeignKey:municipalities_id;foreignKey:id;references:MunicipalitiesID" json:"municipalities,omitempty"`
+        Nombre           string                         `gorm:"column:nombre;type:varchar(255);not null" json:"nombre" validate:"required"`
+        Descripcion      string                         `gorm:"column:descripcion;type:varchar(255);not null" json:"descripcion" validate:"required"`
+        Dirrecion        string                         `gorm:"column:dirrecion;type:varchar(255);not null" json:"dirrecion" validate:"required"`
+        Puntuacion       string                         `gorm:"column:puntuacion;type:varchar(255);not null" json:"puntuacion" validate:"required"`
+        Estado           bool                           `gorm:"column:estado;type:boolean;not null" json:"estado" validate:"required"`
+        Latitud          string                         `gorm:"column:latitud;type:varchar(255);not null" json:"latitud" validate:"required"`
+        Longitud         string                         `gorm:"column:longitud;type:varchar(255);not null" json:"longitud" validate:"required"`
+        NumeroResena     string                         `gorm:"column:numero_resena;type:varchar(255);not null" json:"numero_resena" validate:"required"`
+        Contact          []ContactWithoutValidate       `json:"contacts"`
+        Resource         []ResourceWithoutValidate      `json:"resource"`
+}
+
+type SitesWithoutValidate struct {
+        Model
+        CategoryID       int                            `gorm:"column:category_id;type:int(11);not null" json:"category_id"`
+        Category         *CategoryWithoutValidate       `gorm:"joinForeignKey:category_id;foreignKey:id;references:CategoryID"`
+        MunicipalitiesID int                            `gorm:"column:municipalities_id;type:int(11);not null" json:"municipalities_id"`
+        Municipalities   *MunicipalitiesWithoutValidate `gorm:"joinForeignKey:municipalities_id;foreignKey:id;references:MunicipalitiesID" json:"municipalities,omitempty"`
+        Nombre           string                         `gorm:"column:nombre;type:varchar(255);not null" json:"nombre"`
+        Descripcion      string                         `gorm:"column:descripcion;type:varchar(255);not null" json:"descripcion"`
+        Dirrecion        string                         `gorm:"column:dirrecion;type:varchar(255);not null" json:"dirrecion"`
+        Puntuacion       string                         `gorm:"column:puntuacion;type:varchar(255);not null" json:"puntuacion"`
+        Estado           bool                           `gorm:"column:estado;type:boolean;not null" json:"estado"`
+        Latitud          string                         `gorm:"column:latitud;type:varchar(255);not null" json:"latitud"`
+        Longitud         string                         `gorm:"column:longitud;type:varchar(255);not null" json:"longitud"`
+        NumeroResena     string                         `gorm:"column:numero_resena;type:varchar(255);not null" json:"numero_resena"`
+}
+
+func (m SitesWithoutValidate) TableName() string <span class="cov10" title="3">{
+        return "sites"
+}</span>
+
+func (m Sites) BeforeCreate(tx *gorm.DB) (err error) <span class="cov6" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Sites) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file23" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Subcategory struct {
+        Model
+        Nombre      string                   `gorm:"column:nombre;type:varchar(255);not null" json:"nombre" validate:"required"`
+        UrlImagen   string                   `gorm:"column:url_imagen;type:text;not null" json:"url_imagen" validate:"required"`
+        Descripcion string                   `gorm:"column:desccripcion;type:varchar(255);not null" json:"descripcion" validate:"required"`
+        Estado      bool                     `gorm:"column:estado;type:boolean;not null" json:"estado" validate:"required"`
+        CategoryId  int                      `gorm:"column:category_id;type:int(11);not null" json:"category_id" validate:"required"`
+        Category    *CategoryWithoutValidate `gorm:"joinForeignKey:category_id;foreignKey:id;references:CategoryId" json:"categories,omitempty"`
+}
+
+type SubcategoryWihtoutValidate struct {
+        Model
+        Nombre      string                   `gorm:"column:nombre;type:varchar(255);not null" json:"nombre"`
+        UrlImagen   string                   `gorm:"column:url_imagen;type:text;not null" json:"url_imagen"`
+        Descripcion string                   `gorm:"column:desccripcion;type:varchar(255);not null" json:"descripcion"`
+        Estado      bool                     `gorm:"column:estado;type:boolean;not null" json:"estado" `
+        CategoryId  int                      `gorm:"column:category_id;type:int(11);not null" json:"category_id"`
+        Category    *CategoryWithoutValidate `gorm:"joinForeignKey:category_id;foreignKey:id;references:CategoryId" json:"categories,omitempty"`
+}
+
+func (r *SubcategoryWihtoutValidate) TableName() string <span class="cov1" title="1">{
+        return "subcategories"
+}</span>
+
+func (m Subcategory) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Subcategory) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file24" style="display: none">package objectValues
+
+type responseWithData struct {
+        StatusCode int         `json:"status_code"`
+        Title      string      `json:"title"`
+        Message    string      `json:"message"`
+        Data       interface{} `json:"data"`
+}
+
+func NewResponseWithData(StatusCode int, Title string, Message string, Data interface{}) responseWithData <span class="cov10" title="24">{
+        return responseWithData{
+                StatusCode,
+                Title,
+                Message,
+                Data,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file25" style="display: none">package repository
+
+import (
+        "service-sites/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryCategory interface {
+        RegisterCategory(category entity.Category) (*entity.Category, error)
+        FindCategoryById(idCateogry int) (*entity.Category, error)
+        FindCategory() (*[]entity.Category, error)
+        UpdateCategory(category entity.Category) (*entity.Category, error)
+        DeleteCategory(idCategory int) error
+}
+
+type repositoryCategory struct {
+        db *gorm.DB
+}
+
+func NewRepositoryCategory(db *gorm.DB) IRepositoryCategory <span class="cov1" title="1">{
+        return &amp;repositoryCategory{
+                db,
+        }
+}</span>
+
+func (r *repositoryCategory) RegisterCategory(category entity.Category) (*entity.Category, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;category).Error
+        return &amp;category, err
+}</span>
+
+func (r *repositoryCategory) FindCategory() (*[]entity.Category, error) <span class="cov0" title="0">{
+        var categorys []entity.Category
+        err := r.db.Preload("SubCategory").Find(&amp;categorys).Error
+        return &amp;categorys, err
+}</span>
+
+func (r *repositoryCategory) UpdateCategory(category entity.Category) (*entity.Category, error) <span class="cov0" title="0">{
+        err := r.db.Save(&amp;category).Error
+        return &amp;category, err
+}</span>
+
+func (r *repositoryCategory) DeleteCategory(idCategory int) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Category{}, idCategory).Error
+}</span>
+
+func (r *repositoryCategory) FindCategoryById(idCateogry int) (*entity.Category, error) <span class="cov0" title="0">{
+        var category *entity.Category
+        err := r.db.First(&amp;category, idCateogry).Error
+        return category, err
+}</span>
+</pre>
+		
+		<pre class="file" id="file26" style="display: none">package repository
+
+import (
+        "service-sites/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryContact interface {
+        InsertContact(contact entity.Contact) (*entity.Contact, error)
+        DeleteContact(idSites int, idContact int) error
+}
+
+type repositoryContact struct {
+        db *gorm.DB
+}
+
+func NewRepositoryContact(db *gorm.DB) IRepositoryContact <span class="cov1" title="1">{
+        return &amp;repositoryContact{
+                db,
+        }
+}</span>
+
+func (r *repositoryContact) InsertContact(contact entity.Contact) (*entity.Contact, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;contact).Error
+        return &amp;contact, err
+}</span>
+
+func (r *repositoryContact) DeleteContact(idSites int, idContact int) error <span class="cov0" title="0">{
+        err := r.db.Where("sites_id = ?  and id= ? ", idSites, idContact).Delete(entity.Contact{}).Error
+        return err
+}</span>
+</pre>
+		
+		<pre class="file" id="file27" style="display: none">package repository
+
+import (
+        "service-sites/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryDepartment interface {
+        InsertDepartment(department entity.Department) (*entity.Department, error)
+        FindDepartment() (*[]entity.Department, error)
+        FindDepartmentById(Id int) (*entity.Department, error)
+        DeleteDepartment(idDeparment int) error
+}
+
+type repositoryDepartment struct {
+        db *gorm.DB
+}
+
+func NewRepositoryDepartment(db *gorm.DB) IRepositoryDepartment <span class="cov1" title="1">{
+        return &amp;repositoryDepartment{
+                db,
+        }
+}</span>
+
+func (r *repositoryDepartment) InsertDepartment(department entity.Department) (*entity.Department, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;department).Error
+        return &amp;department, err
+}</span>
+
+func (r *repositoryDepartment) FindDepartment() (*[]entity.Department, error) <span class="cov0" title="0">{
+        var entitys []entity.Department
+        err := r.db.Preload("Municipalities").Find(&amp;entitys).Error
+        return &amp;entitys, err
+}</span>
+
+func (r *repositoryDepartment) FindDepartmentById(Id int) (*entity.Department, error) <span class="cov0" title="0">{
+        var deparment entity.Department
+        err := r.db.First(&amp;deparment, Id).Error
+        return &amp;deparment, err
+}</span>
+
+func (r *repositoryDepartment) DeleteDepartment(idDeparment int) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Department{}, idDeparment).Error
+}</span>
+</pre>
+		
+		<pre class="file" id="file28" style="display: none">package repository
+
+import (
+        "service-sites/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryMunicipalities interface {
+        InsertMunicipalitiest(municipalities entity.Municipalities) (*entity.Municipalities, error)
+        FindMunicipalities(idDeparment int) (*[]entity.Municipalities, error)
+        DeleteMunicipalities(idMunicipalities int) error
+        FindOneMunicipalities(idMunicipalities int) (*entity.Municipalities, error)
+}
+
+type repositoryMunicipalities struct {
+        db *gorm.DB
+}
+
+func NewRepositoryMunicipalities(db *gorm.DB) IRepositoryMunicipalities <span class="cov1" title="1">{
+        return &amp;repositoryMunicipalities{
+                db,
+        }
+}</span>
+
+func (r *repositoryMunicipalities) InsertMunicipalitiest(municipalities entity.Municipalities) (*entity.Municipalities, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;municipalities).Error
+        return &amp;municipalities, err
+}</span>
+
+func (r *repositoryMunicipalities) FindMunicipalities(idDeparment int) (*[]entity.Municipalities, error) <span class="cov0" title="0">{
+        var municipalities []entity.Municipalities
+        err := r.db.Where("department_id = ?", idDeparment).Find(&amp;municipalities).Error
+        return &amp;municipalities, err
+}</span>
+
+func (r *repositoryMunicipalities) DeleteMunicipalities(idMunicipalities int) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Municipalities{}, idMunicipalities).Error
+}</span>
+
+func (r *repositoryMunicipalities) FindOneMunicipalities(idMunicipalities int) (*entity.Municipalities, error) <span class="cov0" title="0">{
+        var municipality entity.Municipalities
+        err := r.db.First(&amp;municipality, idMunicipalities).Error
+        return &amp;municipality, err
+}</span>
+</pre>
+		
+		<pre class="file" id="file29" style="display: none">package repository
+
+import (
+        "service-sites/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryResource interface {
+        InsertResource(resource entity.Resource) (*entity.Resource, error)
+        FindResource(idSites int) (*[]entity.Resource, error)
+        FindOneResource(idSites int, idResource int) (*entity.Resource, error)
+        DeleteResource(idSites int, idResource int) error
+}
+
+type repositoryResource struct {
+        db *gorm.DB
+}
+
+func NewRepositoryResource(db *gorm.DB) IRepositoryResource <span class="cov1" title="1">{
+        return &amp;repositoryResource{
+                db,
+        }
+}</span>
+
+func (r *repositoryResource) InsertResource(resource entity.Resource) (*entity.Resource, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;resource).Error
+        return &amp;resource, err
+}</span>
+
+func (r *repositoryResource) FindResource(idSites int) (*[]entity.Resource, error) <span class="cov0" title="0">{
+        var resource []entity.Resource
+        err := r.db.Where("sites_id = ?", idSites).Find(&amp;resource).Error
+        return &amp;resource, err
+}</span>
+
+func (r *repositoryResource) DeleteResource(idSites int, idResource int) error <span class="cov0" title="0">{
+        err := r.db.Where("sites_id = ?  and id= ? ", idSites, idResource).Delete(entity.Resource{}).Error
+        return err
+}</span>
+
+func (r *repositoryResource) FindOneResource(idSites int, idResource int) (*entity.Resource, error) <span class="cov0" title="0">{
+        var res entity.Resource
+        err := r.db.Where("sites_id = ?  and id= ? ", idSites, idResource).First(res).Error
+        return &amp;res, err
+}</span>
+</pre>
+		
+		<pre class="file" id="file30" style="display: none">package repository
+
+import (
+        "service-sites/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryReview interface {
+        InsertReview(review entity.Review) (*entity.Review, error)
+        FindReview(idSites int) (*[]entity.Review, error)
+        DeleteReview(idSites int, idReview int) error
+}
+
+type repositoryReview struct {
+        db *gorm.DB
+}
+
+func NewRepositoryReview(db *gorm.DB) IRepositoryReview <span class="cov1" title="1">{
+        return &amp;repositoryReview{
+                db,
+        }
+}</span>
+
+func (r *repositoryReview) InsertReview(review entity.Review) (*entity.Review, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;review).Error
+        return &amp;review, err
+}</span>
+func (r *repositoryReview) FindReview(idSites int) (*[]entity.Review, error) <span class="cov0" title="0">{
+        var reviews []entity.Review
+        err := r.db.Where("sites_id = ?", idSites).Find(&amp;reviews).Error
+        return &amp;reviews, err
+}</span>
+func (r *repositoryReview) DeleteReview(idSites int, idReview int) error <span class="cov0" title="0">{
+        err := r.db.Where("sites_id = ?  and id= ? ", idSites, idReview).Delete(entity.Review{}).Error
+        return err
+}</span>
+</pre>
+		
+		<pre class="file" id="file31" style="display: none">package repository
+
+import (
+        "service-sites/internal/domain/entity"
+        "service-sites/internal/domain/utils"
+
+        "gorm.io/gorm"
+)
+
+type IRepositorySites interface {
+        InsertSites(review entity.Sites) (*entity.Sites, error)
+        FindOneSites(idSites int) (*entity.Sites, error)
+        DeleteSites(idSites int) error
+        FindSites(filter map[string]interface{}) (*[]entity.Sites, error)
+}
+
+type repositorySites struct {
+        db *gorm.DB
+}
+
+func NewRepositorySites(db *gorm.DB) IRepositorySites <span class="cov1" title="1">{
+        return &amp;repositorySites{
+                db,
+        }
+}</span>
+
+func (r *repositorySites) InsertSites(review entity.Sites) (*entity.Sites, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;review).Error
+        return &amp;review, err
+}</span>
+func (r *repositorySites) FindOneSites(idSites int) (*entity.Sites, error) <span class="cov0" title="0">{
+        var sites entity.Sites
+        err := r.db.Preload("Contact").Preload("Resource").Preload("Category").First(&amp;sites, idSites).Error
+        return &amp;sites, err
+}</span>
+
+func (r *repositorySites) DeleteSites(idSites int) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Sites{}, idSites).Error
+}</span>
+func (r *repositorySites) FindSites(filter map[string]interface{}) (*[]entity.Sites, error) <span class="cov0" title="0">{
+        var sites []entity.Sites
+        command, request := utils.GetWhere(filter)
+        err := r.db.Preload("Contact").
+                Preload("Resource").
+                Preload("Category").
+                Where(command, request...).Find(&amp;sites).Error
+        return &amp;sites, err
+}</span>
+</pre>
+		
+		<pre class="file" id="file32" style="display: none">package repository
+
+import (
+        "service-sites/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositorySubCategory interface {
+        InsertSubcategory(review entity.Subcategory) (*entity.Subcategory, error)
+        FindOneSubcategory(idSubCategory int) (*entity.Subcategory, error)
+        DeleteSubcategory(idCategory int, idSubcategory int) error
+        FindSubcategory(idCategory int) (*[]entity.Subcategory, error)
+}
+
+type repositorySubCategory struct {
+        db *gorm.DB
+}
+
+func NewRepositorySubCategory(db *gorm.DB) IRepositorySubCategory <span class="cov1" title="1">{
+        return &amp;repositorySubCategory{
+                db,
+        }
+}</span>
+
+func (r *repositorySubCategory) InsertSubcategory(subcategory entity.Subcategory) (*entity.Subcategory, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;subcategory).Error
+        return &amp;subcategory, err
+}</span>
+func (r *repositorySubCategory) FindOneSubcategory(idSubCategory int) (*entity.Subcategory, error) <span class="cov0" title="0">{
+        var subcategory entity.Subcategory
+        err := r.db.First(&amp;subcategory, idSubCategory).Error
+        return &amp;subcategory, err
+}</span>
+func (r *repositorySubCategory) DeleteSubcategory(idCategory int, idSubcategory int) error <span class="cov0" title="0">{
+        err := r.db.Where("category_id = ?  and id= ? ", idCategory, idSubcategory).Delete(entity.Subcategory{}).Error
+        return err
+}</span>
+func (r *repositorySubCategory) FindSubcategory(idCategory int) (*[]entity.Subcategory, error) <span class="cov0" title="0">{
+        var subcategorys []entity.Subcategory
+        err := r.db.Where("category_id = ?", idCategory).Find(&amp;subcategorys).Error
+        return &amp;subcategorys, err
+}</span>
+</pre>
+		
+		<pre class="file" id="file33" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-sites/internal/domain/entity"
+        objectValues "service-sites/internal/domain/object_values"
+        "service-sites/internal/domain/repository"
+        "service-sites/internal/infra/storage"
+        "service-sites/internal/utils"
+)
+
+type CategoryUseCase struct {
+        repoCate repository.IRepositoryCategory
+        file     storage.IGCImageRepo
+}
+
+func NewCategoryUseCase(repoCate repository.IRepositoryCategory, file storage.IGCImageRepo) CategoryUseCase <span class="cov10" title="11">{
+        return CategoryUseCase{
+                repoCate,
+                file,
+        }
+}</span>
+
+func (e *CategoryUseCase) SeeCategory() (interface{}, int) <span class="cov3" title="2">{
+        category, err := e.repoCate.FindCategory()
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", category), http.StatusOK</span>
+}
+
+func (e *CategoryUseCase) UpdateCategory(category entity.Category) (interface{}, int) <span class="cov3" title="2">{
+        categoryUpdate, err := e.repoCate.UpdateCategory(category)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al actualizar la categoria", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "categoria actualizada exitosamente", categoryUpdate), http.StatusOK</span>
+}
+
+func (e *CategoryUseCase) DeleteCategory(ctx context.Context, Id int) (interface{}, int) <span class="cov6" title="4">{
+        cat, err := e.repoCate.FindCategoryById(Id)
+        if err != nil || cat.ID == 0 </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "la category no fue encontrado", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov5" title="3">objectName := utils.ExtractObjectName(cat.UrlImagen)
+        err = e.file.DeleteFile(ctx, "category/%s", objectName)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov3" title="2">err = e.repoCate.DeleteCategory(Id)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la categoria", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "categoria eliminada exitosamente", nil), http.StatusOK</span>
+
+}
+
+func (e *CategoryUseCase) InsertCategory(ctx context.Context, category entity.Category) (interface{}, int) <span class="cov5" title="3">{
+        pathname, err := e.file.SetFile(ctx, category.UrlImagen, "category/cat-%s.png")
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov3" title="2">category.UrlImagen = pathname
+        newCategory, err := e.repoCate.RegisterCategory(category)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar la categoria", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "categoria insertada exitosamente", newCategory), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file34" style="display: none">package usecase
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        objectValues "service-sites/internal/domain/object_values"
+        "service-sites/internal/domain/repository"
+)
+
+type ContactUseCase struct {
+        repoCon repository.IRepositoryContact
+}
+
+func NewContactUseCase(repoCon repository.IRepositoryContact) ContactUseCase <span class="cov10" title="4">{
+        return ContactUseCase{
+                repoCon,
+        }
+}</span>
+
+func (e *ContactUseCase) DeleteContact(IdSites int, IdContact int) (interface{}, int) <span class="cov5" title="2">{
+        err := e.repoCon.DeleteContact(IdSites, IdContact)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el contacto", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "contacto eliminada exitosamente", nil), http.StatusOK</span>
+}
+
+func (e *ContactUseCase) InsertContact(contact entity.Contact) (interface{}, int) <span class="cov5" title="2">{
+        newContact, err := e.repoCon.InsertContact(contact)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar el contacto", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "contacto insertada exitosamente", newContact), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file35" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-sites/internal/domain/entity"
+        objectValues "service-sites/internal/domain/object_values"
+        "service-sites/internal/domain/repository"
+        "service-sites/internal/infra/storage"
+        "service-sites/internal/utils"
+)
+
+type DepartmentUseCase struct {
+        repoDep repository.IRepositoryDepartment
+        file    storage.IGCImageRepo
+}
+
+func NewDepartmentUseCase(repoDep repository.IRepositoryDepartment, file storage.IGCImageRepo) DepartmentUseCase <span class="cov10" title="9">{
+        return DepartmentUseCase{
+                repoDep,
+                file,
+        }
+}</span>
+
+func (e *DepartmentUseCase) SeeDeparment() (interface{}, int) <span class="cov3" title="2">{
+        deparment, err := e.repoDep.FindDepartment()
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", deparment), http.StatusOK</span>
+}
+
+func (e *DepartmentUseCase) InsertDeparment(ctx context.Context, deparment entity.Department) (interface{}, int) <span class="cov5" title="3">{
+        pathname, err := e.file.SetFile(ctx, deparment.Bandera, "deparment/dep-%s.png")
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov3" title="2">deparment.Bandera = pathname
+        newDepartment, err := e.repoDep.InsertDepartment(deparment)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar el departamento", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "departamento insertada exitosamente", newDepartment), http.StatusOK</span>
+}
+
+func (e *DepartmentUseCase) DeleteDeparment(ctx context.Context, id int) (interface{}, int) <span class="cov6" title="4">{
+        dep, err := e.repoDep.FindDepartmentById(id)
+        if err != nil || dep == nil || dep.ID == 0 </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "no se encontro el steps", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov5" title="3">objectName := utils.ExtractObjectName(dep.Bandera)
+        err = e.file.DeleteFile(ctx, "deparment/%s", objectName)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov3" title="2">err = e.repoDep.DeleteDepartment(id)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el departamento", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "departamento eliminada exitosamente", nil), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file36" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-sites/internal/domain/entity"
+        objectValues "service-sites/internal/domain/object_values"
+        "service-sites/internal/domain/repository"
+        "service-sites/internal/infra/storage"
+        "service-sites/internal/utils"
+)
+
+type MunicipalitiesUseCase struct {
+        repoMun repository.IRepositoryMunicipalities
+        repoDep repository.IRepositoryDepartment
+        file    storage.IGCImageRepo
+}
+
+func NewMunicipalitiesUseCase(repoMun repository.IRepositoryMunicipalities, repoDep repository.IRepositoryDepartment, file storage.IGCImageRepo) MunicipalitiesUseCase <span class="cov0" title="0">{
+        return MunicipalitiesUseCase{
+                repoMun,
+                repoDep,
+                file,
+        }
+}</span>
+
+func (e *MunicipalitiesUseCase) SeeMuncipalities(idDeparment int) (interface{}, int) <span class="cov0" title="0">{
+        municipalities, err := e.repoMun.FindMunicipalities(idDeparment)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", municipalities), http.StatusOK</span>
+}
+
+func (e *MunicipalitiesUseCase) InsertMuncipalities(ctx context.Context, municipalities entity.Municipalities) (interface{}, int) <span class="cov0" title="0">{
+        pathname, err := e.file.SetFile(ctx, municipalities.Bandera, "municipalities/step-%s.png")
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">municipalities.Bandera = pathname
+        deparment, err := e.repoDep.FindDepartmentById(municipalities.DepartmentId)
+        if err != nil || deparment.ID == 0 </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "el departamento no fue encontrado", nil), http.StatusBadRequest
+        }</span>
+
+        <span class="cov0" title="0">newMunicipalities, err := e.repoMun.InsertMunicipalitiest(municipalities)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar el municipio", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "municipio insertada exitosamente", newMunicipalities), http.StatusOK</span>
+
+}
+
+func (e *MunicipalitiesUseCase) DeleteMuncipalities(ctx context.Context, Id int) (interface{}, int) <span class="cov0" title="0">{
+        deparment, err := e.repoDep.FindDepartmentById(Id)
+        if err != nil || deparment.ID == 0 </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "el departament no fue encontrado", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">mun, err := e.repoMun.FindOneMunicipalities(Id)
+        if err != nil || mun == nil || mun.ID == 0 </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "el municipalities no fue encontrado", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">objectName := utils.ExtractObjectName(mun.Bandera)
+        err = e.file.DeleteFile(ctx, "municipalities/%s", objectName)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">errDel := e.repoMun.DeleteMunicipalities(Id)
+        if errDel != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el municipio", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "municipio eliminado exitosamente", nil), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file37" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-sites/internal/domain/entity"
+        objectValues "service-sites/internal/domain/object_values"
+        "service-sites/internal/domain/repository"
+        "service-sites/internal/infra/storage"
+        "service-sites/internal/utils"
+)
+
+type ResourceUseCase struct {
+        repoRes repository.IRepositoryResource
+        file    storage.IGCImageRepo
+}
+
+func NewResourceUseCase(repoRes repository.IRepositoryResource, file storage.IGCImageRepo) ResourceUseCase <span class="cov0" title="0">{
+        return ResourceUseCase{
+                repoRes,
+                file,
+        }
+}</span>
+
+func (e *ResourceUseCase) AddResource(ctx context.Context, resource entity.Resource) (interface{}, int) <span class="cov0" title="0">{
+        if resource.TypeRecursos == "IMAGE" </span><span class="cov0" title="0">{
+                pathname, err := e.file.SetFile(ctx, resource.Payload, "resource-sites/res-%s.png")
+
+                if err != nil </span><span class="cov0" title="0">{
+                        return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+                }</span>
+                <span class="cov0" title="0">resource.Payload = pathname</span>
+        }
+        <span class="cov0" title="0">newResource, err := e.repoRes.InsertResource(resource)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar el recurso", nil), http.StatusBadRequest
+
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "recurso insertada exitosamente", newResource), http.StatusOK</span>
+}
+
+func (e *ResourceUseCase) DeleteResource(ctx context.Context, idSites int, idResource int) (interface{}, int) <span class="cov0" title="0">{
+        res, err := e.repoRes.FindOneResource(idSites, idResource)
+        if err != nil || res.ID == 0 </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "el resource no fue encontrado", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">objectName := utils.ExtractObjectName(res.Payload)
+        err = e.file.DeleteFile(ctx, "resource-sites/%s", objectName)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">err = e.repoRes.DeleteResource(idSites, idResource)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el recurso", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "recurso eliminado exitosamente", nil), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file38" style="display: none">package usecase
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        objectValues "service-sites/internal/domain/object_values"
+        "service-sites/internal/domain/repository"
+)
+
+type ReviewUseCase struct {
+        repoRev  repository.IRepositoryReview
+        repoSite repository.IRepositorySites
+}
+
+func NewReviewUseCase(repoRev repository.IRepositoryReview, repoSite repository.IRepositorySites) ReviewUseCase <span class="cov0" title="0">{
+        return ReviewUseCase{
+                repoRev,
+                repoSite,
+        }
+}</span>
+
+func (e *ReviewUseCase) AddReview(review entity.Review) (interface{}, int) <span class="cov0" title="0">{
+        sites, err := e.repoSite.FindOneSites(review.SitesID)
+        if err != nil || sites.ID == 0 </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "sites no encontrado", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">newReview, err := e.repoRev.InsertReview(review)
+        if err != nil || sites.ID == 0 </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al insertar review", nil), http.StatusBadRequest
+        }</span>
+
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "reseña insertada exitosamente", newReview), http.StatusOK</span>
+}
+
+func (e *ReviewUseCase) DeleteReview(idSites int, idReview int) (interface{}, int) <span class="cov0" title="0">{
+        err := e.repoRev.DeleteReview(idSites, idReview)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un error al eliminar la reseña", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "reseña eliminado exitosamente", nil), http.StatusOK</span>
+}
+
+func (e *ReviewUseCase) SeeReview(idSites int) (interface{}, int) <span class="cov0" title="0">{
+        review, err := e.repoRev.FindReview(idSites)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un error al traer la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", review), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file39" style="display: none">package usecase
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        objectValues "service-sites/internal/domain/object_values"
+        "service-sites/internal/domain/repository"
+)
+
+type SitesUseCase struct {
+        repoSite repository.IRepositorySites
+}
+
+func NewSitesUseCase(repoSite repository.IRepositorySites) SitesUseCase <span class="cov0" title="0">{
+        return SitesUseCase{
+                repoSite,
+        }
+}</span>
+
+func (e *SitesUseCase) SeeSites(filter map[string]interface{}) (interface{}, int) <span class="cov0" title="0">{
+        sites, err := e.repoSite.FindSites(filter)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", sites), http.StatusOK</span>
+}
+
+func (e *SitesUseCase) SeeOneSites(idSites int) (interface{}, int) <span class="cov0" title="0">{
+        site, err := e.repoSite.FindOneSites(idSites)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", site), http.StatusOK</span>
+}
+
+func (e *SitesUseCase) DeleteSites(idSites int) (interface{}, int) <span class="cov0" title="0">{
+        err := e.repoSite.DeleteSites(idSites)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el sitio", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sitio eliminado exitosamente", nil), http.StatusOK</span>
+}
+
+func (e *SitesUseCase) AddSites(site entity.Sites) (interface{}, int) <span class="cov0" title="0">{
+        newSite, err := e.repoSite.InsertSites(site)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar el sitio", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sitio insertada exitosamente", newSite), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file40" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-sites/internal/domain/entity"
+        objectValues "service-sites/internal/domain/object_values"
+        "service-sites/internal/domain/repository"
+        "service-sites/internal/infra/storage"
+        "service-sites/internal/utils"
+)
+
+type SubCategoryUseCase struct {
+        repoSubCate repository.IRepositorySubCategory
+        repoCate    repository.IRepositoryCategory
+        file        storage.IGCImageRepo
+}
+
+func NewSubCategoryUseCase(repoSubCate repository.IRepositorySubCategory, repoCate repository.IRepositoryCategory, file storage.IGCImageRepo) SubCategoryUseCase <span class="cov0" title="0">{
+        return SubCategoryUseCase{
+                repoSubCate,
+                repoCate,
+                file,
+        }
+}</span>
+
+func (e *SubCategoryUseCase) InsertSubcategory(ctx context.Context, subCategory entity.Subcategory) (interface{}, int) <span class="cov0" title="0">{
+        category, err := e.repoCate.FindCategoryById(subCategory.CategoryId)
+        if err != nil || category.ID == 0 </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la categoria", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">pathname, err := e.file.SetFile(ctx, subCategory.UrlImagen, "subcategories/cat-%s.png")
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">subCategory.UrlImagen = pathname
+        newSubcategory, err := e.repoSubCate.InsertSubcategory(subCategory)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar la subcategoria", nil), http.StatusBadRequest
+
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "municipio insertada exitosamente", newSubcategory), http.StatusOK</span>
+
+}
+
+func (e *SubCategoryUseCase) DeleteSubCategory(ctx context.Context, idCategory int, idSubcategory int) (interface{}, int) <span class="cov0" title="0">{
+        subCategories, err := e.repoSubCate.FindOneSubcategory(idSubcategory)
+        if err != nil || subCategories.ID == 0 </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "la category no fue encontrado", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">objectName := utils.ExtractObjectName(subCategories.UrlImagen)
+        err = e.file.DeleteFile(ctx, "subcategories/%s", objectName)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">err = e.repoSubCate.DeleteSubcategory(idCategory, idSubcategory)
+        if err != nil </span><span class="cov0" title="0">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la subcateoria", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "subcategoria eliminada exitosamente", nil), http.StatusOK</span>
+
+}
+</pre>
+		
+		<pre class="file" id="file41" style="display: none">package utils
+
+func GetWhere(data map[string]interface{}) (string, []interface{}) <span class="cov0" title="0">{
+        var i = 0
+        var command = ""
+        var request []interface{}
+        for index, value := range data </span><span class="cov0" title="0">{
+                if i != 0 </span><span class="cov0" title="0">{
+                        command += " and "
+                }</span>
+                <span class="cov0" title="0">command += index + " = ? "
+                request = append(request, value)
+                i++</span>
+        }
+        <span class="cov0" title="0">return command, request</span>
+}
+</pre>
+		
+		<pre class="file" id="file42" style="display: none">package utils
+
+import "net/url"
+
+func UrlValuesToMap(values url.Values) map[string]interface{} <span class="cov0" title="0">{
+        m := make(map[string]interface{})
+        for k, v := range values </span><span class="cov0" title="0">{
+                m[k] = v[0]
+        }</span>
+        <span class="cov0" title="0">return m</span>
+}
+</pre>
+		
+		<pre class="file" id="file43" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        validatorPer "service-sites/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateCategory(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                category := new(entity.Category)
+
+                _ = c.Bind(&amp;category)
+                if err := v.Struct(category); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("category", category)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file44" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        validatorPer "service-sites/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateContact(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                contact := new(entity.Contact)
+
+                _ = c.Bind(&amp;contact)
+                if err := v.Struct(contact); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("contact", contact)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file45" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        validatorPer "service-sites/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateDepartment(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                department := new(entity.Department)
+
+                _ = c.Bind(&amp;department)
+                if err := v.Struct(department); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("department", department)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file46" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        validatorPer "service-sites/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateMunicipalities(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                municipalities := new(entity.Municipalities)
+
+                _ = c.Bind(&amp;municipalities)
+                if err := v.Struct(municipalities); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("municipalities", municipalities)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file47" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        validatorPer "service-sites/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateResource(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                resource := new(entity.Resource)
+
+                _ = c.Bind(&amp;resource)
+                if err := v.Struct(resource); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("resource", resource)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file48" style="display: none">package validator
+
+import (
+        "fmt"
+        "net/http"
+        "service-sites/internal/domain/entity"
+        objectValues "service-sites/internal/domain/object_values"
+        validatorPer "service-sites/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateReview(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                auth := c.Get("auth").(objectValues.Auth)
+                review := new(entity.Review)
+                _ = c.Bind(&amp;review)
+                if err := v.Struct(review); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">fmt.Println(auth)
+                review.UserId = int(auth.Data.ID)
+                review.UserNombre = auth.Data.Nombres
+                c.Set("review", review)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file49" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        validatorPer "service-sites/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateSites(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                sites := new(entity.Sites)
+
+                _ = c.Bind(&amp;sites)
+                if err := v.Struct(sites); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("sites", sites)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file50" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-sites/internal/domain/entity"
+        validatorPer "service-sites/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateSubCategory(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                subCategory := new(entity.Subcategory)
+
+                _ = c.Bind(&amp;subCategory)
+                if err := v.Struct(subCategory); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("subCategory", subCategory)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file51" style="display: none">package storage
+
+import (
+        "context"
+        "errors"
+        "fmt"
+        "io"
+        "log"
+        "service-sites/internal/utils"
+
+        "cloud.google.com/go/storage"
+)
+
+type gcImageRepository struct {
+        Storage    *storage.Client
+        BucketName string
+}
+
+type IGCImageRepo interface {
+        SetFile(ctx context.Context, field, routeSprintf string) (string, error)
+        DeleteFile(ctx context.Context, routeSprintf, name string) error
+}
+
+func InitStorage(gcClient *storage.Client, bucketName string) IGCImageRepo <span class="cov0" title="0">{
+        return &amp;gcImageRepository{
+                Storage:    gcClient,
+                BucketName: bucketName,
+        }
+}</span>
+
+func (r *gcImageRepository) SetFile(ctx context.Context, field, routeSprintf string) (string, error) <span class="cov0" title="0">{
+        buf, err := utils.DecodeFile(field)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", errors.New("no es posible decodificar el archivo especificado")
+        }</span>
+        <span class="cov0" title="0">randomName := fmt.Sprintf(routeSprintf, utils.RandomNameObjectUUID())
+
+        bckt := r.Storage.Bucket(r.BucketName)
+        object := bckt.Object(randomName)
+        wc := object.NewWriter(ctx)
+        wc.ObjectAttrs.CacheControl = "Cache-Control:no-cache, max-age=0"
+
+        if _, err := io.Copy(wc, buf); err != nil </span><span class="cov0" title="0">{
+                log.Printf("no se puede escribir el archivo en Google Cloud Storage: %v\n", err)
+                return "", errors.New("no se puede escribir el archivo en Google Cloud Storage")
+        }</span>
+
+        <span class="cov0" title="0">if err := wc.Close(); err != nil </span><span class="cov0" title="0">{
+                fmt.Println(err)
+                return "", errors.New("problemas de acceso al sistema de almacenamiento")
+        }</span>
+
+        <span class="cov0" title="0">imageURL := fmt.Sprintf(
+                "https://storage.googleapis.com/%s/%s",
+                r.BucketName,
+                randomName,
+        )
+
+        return imageURL, nil</span>
+}
+
+func (r *gcImageRepository) DeleteFile(ctx context.Context, routeSprintf, name string) error <span class="cov0" title="0">{
+        bckt := r.Storage.Bucket(r.BucketName)
+        objectName := fmt.Sprintf(routeSprintf, name)
+        object := bckt.Object(objectName)
+
+        if err := object.Delete(ctx); err != nil </span><span class="cov0" title="0">{
+                return errors.New("no fue posible eliminar el archivo con el ID especificado")
+        }</span>
+
+        <span class="cov0" title="0">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file52" style="display: none">package validator
+
+import (
+        "log"
+        "strings"
+        "sync"
+
+        "github.com/go-playground/locales/es"
+        ut "github.com/go-playground/universal-translator"
+        "github.com/go-playground/validator/v10"
+        es_translation "github.com/go-playground/validator/v10/translations/es"
+)
+
+var once sync.Once
+
+var validate *validator.Validate
+var trans ut.Translator
+
+func NewValidator() *validator.Validate <span class="cov6" title="8">{
+        once.Do(func() </span><span class="cov1" title="1">{
+                validate = validator.New()
+                es := es.New()
+                uni := ut.New(es, es)
+
+                trans, found := uni.GetTranslator("es")
+                if !found </span><span class="cov0" title="0">{
+                        log.Fatal("Traductor no encontrado")
+                }</span>
+                <span class="cov1" title="1">if err := es_translation.RegisterDefaultTranslations(validate, trans); err != nil </span><span class="cov0" title="0">{
+                        log.Fatal(err)
+                }</span>
+        })
+        <span class="cov6" title="8">return validate</span>
+}
+
+type Error struct {
+        Key     string
+        Message string
+}
+
+func GenerateMessage(v *validator.Validate, errs validator.ValidationErrors) []Error <span class="cov6" title="8">{
+
+        var errors []Error
+
+        for _, e := range errs </span><span class="cov10" title="37">{
+                error := Error{
+                        Key:     strings.Split(e.Translate(trans), " ")[1],
+                        Message: e.Translate((trans)),
+                }
+                errors = append(errors, error)
+        }</span>
+
+        <span class="cov6" title="8">return errors</span>
+
+}
+</pre>
+		
+		<pre class="file" id="file53" style="display: none">package utils
+
+import (
+        "bytes"
+        "encoding/base64"
+        "errors"
+)
+
+func DecodeFile(strBase64 string) (*bytes.Buffer, error) <span class="cov0" title="0">{
+        data, err := base64.StdEncoding.DecodeString(strBase64)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, errors.New("no es posible decodificar el archivo debido a errores existentes")
+        }</span>
+
+        <span class="cov0" title="0">buf := bytes.NewBuffer(data)
+        return buf, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file54" style="display: none">package utils
+
+import (
+        "github.com/google/uuid"
+)
+
+func RandomNameObjectUUID() string <span class="cov0" title="0">{
+        objID, _ := uuid.NewRandom()
+        return objID.String()
+}</span>
+</pre>
+		
+		<pre class="file" id="file55" style="display: none">package utils
+
+import (
+        "net/url"
+        "path"
+        "strings"
+)
+
+func IsURL(content string) bool <span class="cov0" title="0">{
+        _, err := url.ParseRequestURI(content)
+        return err == nil &amp;&amp; strings.HasPrefix(content, "https://")
+}</span>
+
+func ExtractObjectName(fileURL string) string <span class="cov10" title="6">{
+        urlPath, _ := url.ParseRequestURI(fileURL)
+        return path.Base(urlPath.Path)
+}</span>
+</pre>
+		
+		<pre class="file" id="file56" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        rest "github.com/sendgrid/rest"
+        mock "github.com/stretchr/testify/mock"
+)
+
+// ClientRest is an autogenerated mock type for the ClientRest type
+type ClientRest struct {
+        mock.Mock
+}
+
+// Delete provides a mock function with given fields: endpoint, body
+func (_m *ClientRest) Delete(endpoint string, body interface{}) (*rest.Response, error) <span class="cov0" title="0">{
+        ret := _m.Called(endpoint, body)
+
+        var r0 *rest.Response
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string, interface{}) (*rest.Response, error)); ok </span><span class="cov0" title="0">{
+                return rf(endpoint, body)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(string, interface{}) *rest.Response); ok </span><span class="cov0" title="0">{
+                r0 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*rest.Response)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(string, interface{}) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Get provides a mock function with given fields: endpoint
+func (_m *ClientRest) Get(endpoint string) (*rest.Response, error) <span class="cov0" title="0">{
+        ret := _m.Called(endpoint)
+
+        var r0 *rest.Response
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string) (*rest.Response, error)); ok </span><span class="cov0" title="0">{
+                return rf(endpoint)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(string) *rest.Response); ok </span><span class="cov0" title="0">{
+                r0 = rf(endpoint)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*rest.Response)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(string) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(endpoint)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Post provides a mock function with given fields: endpoint, body
+func (_m *ClientRest) Post(endpoint string, body interface{}) (*rest.Response, error) <span class="cov0" title="0">{
+        ret := _m.Called(endpoint, body)
+
+        var r0 *rest.Response
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string, interface{}) (*rest.Response, error)); ok </span><span class="cov0" title="0">{
+                return rf(endpoint, body)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(string, interface{}) *rest.Response); ok </span><span class="cov0" title="0">{
+                r0 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*rest.Response)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(string, interface{}) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Put provides a mock function with given fields: endpoint, body
+func (_m *ClientRest) Put(endpoint string, body interface{}) (*rest.Response, error) <span class="cov0" title="0">{
+        ret := _m.Called(endpoint, body)
+
+        var r0 *rest.Response
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string, interface{}) (*rest.Response, error)); ok </span><span class="cov0" title="0">{
+                return rf(endpoint, body)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(string, interface{}) *rest.Response); ok </span><span class="cov0" title="0">{
+                r0 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*rest.Response)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(string, interface{}) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewClientRest interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewClientRest creates a new instance of ClientRest. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewClientRest(t mockConstructorTestingTNewClientRest) *ClientRest <span class="cov0" title="0">{
+        mock := &amp;ClientRest{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file57" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        context "context"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IGCImageRepo is an autogenerated mock type for the IGCImageRepo type
+type IGCImageRepo struct {
+        mock.Mock
+}
+
+// DeleteFile provides a mock function with given fields: ctx, routeSprintf, name
+func (_m *IGCImageRepo) DeleteFile(ctx context.Context, routeSprintf string, name string) error <span class="cov6" title="6">{
+        ret := _m.Called(ctx, routeSprintf, name)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(context.Context, string, string) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(ctx, routeSprintf, name)
+        }</span> else<span class="cov6" title="6"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov6" title="6">return r0</span>
+}
+
+// SetFile provides a mock function with given fields: ctx, field, routeSprintf
+func (_m *IGCImageRepo) SetFile(ctx context.Context, field string, routeSprintf string) (string, error) <span class="cov6" title="6">{
+        ret := _m.Called(ctx, field, routeSprintf)
+
+        var r0 string
+        var r1 error
+        if rf, ok := ret.Get(0).(func(context.Context, string, string) (string, error)); ok </span><span class="cov0" title="0">{
+                return rf(ctx, field, routeSprintf)
+        }</span>
+        <span class="cov6" title="6">if rf, ok := ret.Get(0).(func(context.Context, string, string) string); ok </span><span class="cov0" title="0">{
+                r0 = rf(ctx, field, routeSprintf)
+        }</span> else<span class="cov6" title="6"> {
+                r0 = ret.Get(0).(string)
+        }</span>
+
+        <span class="cov6" title="6">if rf, ok := ret.Get(1).(func(context.Context, string, string) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(ctx, field, routeSprintf)
+        }</span> else<span class="cov6" title="6"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov6" title="6">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIGCImageRepo interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIGCImageRepo creates a new instance of IGCImageRepo. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIGCImageRepo(t mockConstructorTestingTNewIGCImageRepo) *IGCImageRepo <span class="cov10" title="20">{
+        mock := &amp;IGCImageRepo{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov10" title="20">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov10" title="20">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file58" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-sites/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositoryCategory is an autogenerated mock type for the IRepositoryCategory type
+type IRepositoryCategory struct {
+        mock.Mock
+}
+
+// DeleteCategory provides a mock function with given fields: idCategory
+func (_m *IRepositoryCategory) DeleteCategory(idCategory int) error <span class="cov3" title="2">{
+        ret := _m.Called(idCategory)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idCategory)
+        }</span> else<span class="cov3" title="2"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov3" title="2">return r0</span>
+}
+
+// FindCategory provides a mock function with given fields:
+func (_m *IRepositoryCategory) FindCategory() (*[]entity.Category, error) <span class="cov3" title="2">{
+        ret := _m.Called()
+
+        var r0 *[]entity.Category
+        var r1 error
+        if rf, ok := ret.Get(0).(func() (*[]entity.Category, error)); ok </span><span class="cov0" title="0">{
+                return rf()
+        }</span>
+        <span class="cov3" title="2">if rf, ok := ret.Get(0).(func() *[]entity.Category); ok </span><span class="cov0" title="0">{
+                r0 = rf()
+        }</span> else<span class="cov3" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov3" title="2">{
+                        r0 = ret.Get(0).(*[]entity.Category)
+                }</span>
+        }
+
+        <span class="cov3" title="2">if rf, ok := ret.Get(1).(func() error); ok </span><span class="cov0" title="0">{
+                r1 = rf()
+        }</span> else<span class="cov3" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov3" title="2">return r0, r1</span>
+}
+
+// FindCategoryById provides a mock function with given fields: idCateogry
+func (_m *IRepositoryCategory) FindCategoryById(idCateogry int) (*entity.Category, error) <span class="cov6" title="4">{
+        ret := _m.Called(idCateogry)
+
+        var r0 *entity.Category
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int) (*entity.Category, error)); ok </span><span class="cov0" title="0">{
+                return rf(idCateogry)
+        }</span>
+        <span class="cov6" title="4">if rf, ok := ret.Get(0).(func(int) *entity.Category); ok </span><span class="cov0" title="0">{
+                r0 = rf(idCateogry)
+        }</span> else<span class="cov6" title="4"> {
+                if ret.Get(0) != nil </span><span class="cov6" title="4">{
+                        r0 = ret.Get(0).(*entity.Category)
+                }</span>
+        }
+
+        <span class="cov6" title="4">if rf, ok := ret.Get(1).(func(int) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idCateogry)
+        }</span> else<span class="cov6" title="4"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov6" title="4">return r0, r1</span>
+}
+
+// RegisterCategory provides a mock function with given fields: category
+func (_m *IRepositoryCategory) RegisterCategory(category entity.Category) (*entity.Category, error) <span class="cov3" title="2">{
+        ret := _m.Called(category)
+
+        var r0 *entity.Category
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Category) (*entity.Category, error)); ok </span><span class="cov0" title="0">{
+                return rf(category)
+        }</span>
+        <span class="cov3" title="2">if rf, ok := ret.Get(0).(func(entity.Category) *entity.Category); ok </span><span class="cov0" title="0">{
+                r0 = rf(category)
+        }</span> else<span class="cov3" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov3" title="2">{
+                        r0 = ret.Get(0).(*entity.Category)
+                }</span>
+        }
+
+        <span class="cov3" title="2">if rf, ok := ret.Get(1).(func(entity.Category) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(category)
+        }</span> else<span class="cov3" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov3" title="2">return r0, r1</span>
+}
+
+// UpdateCategory provides a mock function with given fields: category
+func (_m *IRepositoryCategory) UpdateCategory(category entity.Category) (*entity.Category, error) <span class="cov3" title="2">{
+        ret := _m.Called(category)
+
+        var r0 *entity.Category
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Category) (*entity.Category, error)); ok </span><span class="cov0" title="0">{
+                return rf(category)
+        }</span>
+        <span class="cov3" title="2">if rf, ok := ret.Get(0).(func(entity.Category) *entity.Category); ok </span><span class="cov0" title="0">{
+                r0 = rf(category)
+        }</span> else<span class="cov3" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov3" title="2">{
+                        r0 = ret.Get(0).(*entity.Category)
+                }</span>
+        }
+
+        <span class="cov3" title="2">if rf, ok := ret.Get(1).(func(entity.Category) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(category)
+        }</span> else<span class="cov3" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov3" title="2">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositoryCategory interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositoryCategory creates a new instance of IRepositoryCategory. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositoryCategory(t mockConstructorTestingTNewIRepositoryCategory) *IRepositoryCategory <span class="cov10" title="11">{
+        mock := &amp;IRepositoryCategory{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov10" title="11">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov10" title="11">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file59" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-sites/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositoryContact is an autogenerated mock type for the IRepositoryContact type
+type IRepositoryContact struct {
+        mock.Mock
+}
+
+// DeleteContact provides a mock function with given fields: idSites, idContact
+func (_m *IRepositoryContact) DeleteContact(idSites int, idContact int) error <span class="cov5" title="2">{
+        ret := _m.Called(idSites, idContact)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int, int) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idSites, idContact)
+        }</span> else<span class="cov5" title="2"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov5" title="2">return r0</span>
+}
+
+// InsertContact provides a mock function with given fields: contact
+func (_m *IRepositoryContact) InsertContact(contact entity.Contact) (*entity.Contact, error) <span class="cov5" title="2">{
+        ret := _m.Called(contact)
+
+        var r0 *entity.Contact
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Contact) (*entity.Contact, error)); ok </span><span class="cov0" title="0">{
+                return rf(contact)
+        }</span>
+        <span class="cov5" title="2">if rf, ok := ret.Get(0).(func(entity.Contact) *entity.Contact); ok </span><span class="cov0" title="0">{
+                r0 = rf(contact)
+        }</span> else<span class="cov5" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov5" title="2">{
+                        r0 = ret.Get(0).(*entity.Contact)
+                }</span>
+        }
+
+        <span class="cov5" title="2">if rf, ok := ret.Get(1).(func(entity.Contact) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(contact)
+        }</span> else<span class="cov5" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov5" title="2">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositoryContact interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositoryContact creates a new instance of IRepositoryContact. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositoryContact(t mockConstructorTestingTNewIRepositoryContact) *IRepositoryContact <span class="cov10" title="4">{
+        mock := &amp;IRepositoryContact{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov10" title="4">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov10" title="4">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file60" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-sites/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositoryDepartment is an autogenerated mock type for the IRepositoryDepartment type
+type IRepositoryDepartment struct {
+        mock.Mock
+}
+
+// DeleteDepartment provides a mock function with given fields: idDeparment
+func (_m *IRepositoryDepartment) DeleteDepartment(idDeparment int) error <span class="cov3" title="2">{
+        ret := _m.Called(idDeparment)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idDeparment)
+        }</span> else<span class="cov3" title="2"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov3" title="2">return r0</span>
+}
+
+// FindDepartment provides a mock function with given fields:
+func (_m *IRepositoryDepartment) FindDepartment() (*[]entity.Department, error) <span class="cov3" title="2">{
+        ret := _m.Called()
+
+        var r0 *[]entity.Department
+        var r1 error
+        if rf, ok := ret.Get(0).(func() (*[]entity.Department, error)); ok </span><span class="cov0" title="0">{
+                return rf()
+        }</span>
+        <span class="cov3" title="2">if rf, ok := ret.Get(0).(func() *[]entity.Department); ok </span><span class="cov0" title="0">{
+                r0 = rf()
+        }</span> else<span class="cov3" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov3" title="2">{
+                        r0 = ret.Get(0).(*[]entity.Department)
+                }</span>
+        }
+
+        <span class="cov3" title="2">if rf, ok := ret.Get(1).(func() error); ok </span><span class="cov0" title="0">{
+                r1 = rf()
+        }</span> else<span class="cov3" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov3" title="2">return r0, r1</span>
+}
+
+// FindDepartmentById provides a mock function with given fields: Id
+func (_m *IRepositoryDepartment) FindDepartmentById(Id int) (*entity.Department, error) <span class="cov6" title="4">{
+        ret := _m.Called(Id)
+
+        var r0 *entity.Department
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int) (*entity.Department, error)); ok </span><span class="cov0" title="0">{
+                return rf(Id)
+        }</span>
+        <span class="cov6" title="4">if rf, ok := ret.Get(0).(func(int) *entity.Department); ok </span><span class="cov0" title="0">{
+                r0 = rf(Id)
+        }</span> else<span class="cov6" title="4"> {
+                if ret.Get(0) != nil </span><span class="cov6" title="4">{
+                        r0 = ret.Get(0).(*entity.Department)
+                }</span>
+        }
+
+        <span class="cov6" title="4">if rf, ok := ret.Get(1).(func(int) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(Id)
+        }</span> else<span class="cov6" title="4"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov6" title="4">return r0, r1</span>
+}
+
+// InsertDepartment provides a mock function with given fields: department
+func (_m *IRepositoryDepartment) InsertDepartment(department entity.Department) (*entity.Department, error) <span class="cov3" title="2">{
+        ret := _m.Called(department)
+
+        var r0 *entity.Department
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Department) (*entity.Department, error)); ok </span><span class="cov0" title="0">{
+                return rf(department)
+        }</span>
+        <span class="cov3" title="2">if rf, ok := ret.Get(0).(func(entity.Department) *entity.Department); ok </span><span class="cov0" title="0">{
+                r0 = rf(department)
+        }</span> else<span class="cov3" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov3" title="2">{
+                        r0 = ret.Get(0).(*entity.Department)
+                }</span>
+        }
+
+        <span class="cov3" title="2">if rf, ok := ret.Get(1).(func(entity.Department) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(department)
+        }</span> else<span class="cov3" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov3" title="2">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositoryDepartment interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositoryDepartment creates a new instance of IRepositoryDepartment. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositoryDepartment(t mockConstructorTestingTNewIRepositoryDepartment) *IRepositoryDepartment <span class="cov10" title="9">{
+        mock := &amp;IRepositoryDepartment{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov10" title="9">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov10" title="9">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file61" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-sites/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositoryMunicipalities is an autogenerated mock type for the IRepositoryMunicipalities type
+type IRepositoryMunicipalities struct {
+        mock.Mock
+}
+
+// DeleteMunicipalities provides a mock function with given fields: idMunicipalities
+func (_m *IRepositoryMunicipalities) DeleteMunicipalities(idMunicipalities int) error <span class="cov0" title="0">{
+        ret := _m.Called(idMunicipalities)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idMunicipalities)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov0" title="0">return r0</span>
+}
+
+// FindMunicipalities provides a mock function with given fields: idDeparment
+func (_m *IRepositoryMunicipalities) FindMunicipalities(idDeparment int) (*[]entity.Municipalities, error) <span class="cov0" title="0">{
+        ret := _m.Called(idDeparment)
+
+        var r0 *[]entity.Municipalities
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int) (*[]entity.Municipalities, error)); ok </span><span class="cov0" title="0">{
+                return rf(idDeparment)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(int) *[]entity.Municipalities); ok </span><span class="cov0" title="0">{
+                r0 = rf(idDeparment)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*[]entity.Municipalities)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(int) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idDeparment)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// FindOneMunicipalities provides a mock function with given fields: idMunicipalities
+func (_m *IRepositoryMunicipalities) FindOneMunicipalities(idMunicipalities int) (*entity.Municipalities, error) <span class="cov0" title="0">{
+        ret := _m.Called(idMunicipalities)
+
+        var r0 *entity.Municipalities
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int) (*entity.Municipalities, error)); ok </span><span class="cov0" title="0">{
+                return rf(idMunicipalities)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(int) *entity.Municipalities); ok </span><span class="cov0" title="0">{
+                r0 = rf(idMunicipalities)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*entity.Municipalities)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(int) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idMunicipalities)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// InsertMunicipalitiest provides a mock function with given fields: municipalities
+func (_m *IRepositoryMunicipalities) InsertMunicipalitiest(municipalities entity.Municipalities) (*entity.Municipalities, error) <span class="cov0" title="0">{
+        ret := _m.Called(municipalities)
+
+        var r0 *entity.Municipalities
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Municipalities) (*entity.Municipalities, error)); ok </span><span class="cov0" title="0">{
+                return rf(municipalities)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entity.Municipalities) *entity.Municipalities); ok </span><span class="cov0" title="0">{
+                r0 = rf(municipalities)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*entity.Municipalities)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entity.Municipalities) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(municipalities)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositoryMunicipalities interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositoryMunicipalities creates a new instance of IRepositoryMunicipalities. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositoryMunicipalities(t mockConstructorTestingTNewIRepositoryMunicipalities) *IRepositoryMunicipalities <span class="cov0" title="0">{
+        mock := &amp;IRepositoryMunicipalities{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file62" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-sites/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositoryResource is an autogenerated mock type for the IRepositoryResource type
+type IRepositoryResource struct {
+        mock.Mock
+}
+
+// DeleteResource provides a mock function with given fields: idSites, idResource
+func (_m *IRepositoryResource) DeleteResource(idSites int, idResource int) error <span class="cov0" title="0">{
+        ret := _m.Called(idSites, idResource)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int, int) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idSites, idResource)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov0" title="0">return r0</span>
+}
+
+// FindOneResource provides a mock function with given fields: idSites, idResource
+func (_m *IRepositoryResource) FindOneResource(idSites int, idResource int) (*entity.Resource, error) <span class="cov0" title="0">{
+        ret := _m.Called(idSites, idResource)
+
+        var r0 *entity.Resource
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int, int) (*entity.Resource, error)); ok </span><span class="cov0" title="0">{
+                return rf(idSites, idResource)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(int, int) *entity.Resource); ok </span><span class="cov0" title="0">{
+                r0 = rf(idSites, idResource)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*entity.Resource)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(int, int) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idSites, idResource)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// FindResource provides a mock function with given fields: idSites
+func (_m *IRepositoryResource) FindResource(idSites int) (*[]entity.Resource, error) <span class="cov0" title="0">{
+        ret := _m.Called(idSites)
+
+        var r0 *[]entity.Resource
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int) (*[]entity.Resource, error)); ok </span><span class="cov0" title="0">{
+                return rf(idSites)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(int) *[]entity.Resource); ok </span><span class="cov0" title="0">{
+                r0 = rf(idSites)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*[]entity.Resource)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(int) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idSites)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// InsertResource provides a mock function with given fields: resource
+func (_m *IRepositoryResource) InsertResource(resource entity.Resource) (*entity.Resource, error) <span class="cov0" title="0">{
+        ret := _m.Called(resource)
+
+        var r0 *entity.Resource
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Resource) (*entity.Resource, error)); ok </span><span class="cov0" title="0">{
+                return rf(resource)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entity.Resource) *entity.Resource); ok </span><span class="cov0" title="0">{
+                r0 = rf(resource)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*entity.Resource)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entity.Resource) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(resource)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositoryResource interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositoryResource creates a new instance of IRepositoryResource. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositoryResource(t mockConstructorTestingTNewIRepositoryResource) *IRepositoryResource <span class="cov0" title="0">{
+        mock := &amp;IRepositoryResource{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file63" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-sites/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositoryReview is an autogenerated mock type for the IRepositoryReview type
+type IRepositoryReview struct {
+        mock.Mock
+}
+
+// DeleteReview provides a mock function with given fields: idSites, idReview
+func (_m *IRepositoryReview) DeleteReview(idSites int, idReview int) error <span class="cov0" title="0">{
+        ret := _m.Called(idSites, idReview)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int, int) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idSites, idReview)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov0" title="0">return r0</span>
+}
+
+// FindReview provides a mock function with given fields: idSites
+func (_m *IRepositoryReview) FindReview(idSites int) (*[]entity.Review, error) <span class="cov0" title="0">{
+        ret := _m.Called(idSites)
+
+        var r0 *[]entity.Review
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int) (*[]entity.Review, error)); ok </span><span class="cov0" title="0">{
+                return rf(idSites)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(int) *[]entity.Review); ok </span><span class="cov0" title="0">{
+                r0 = rf(idSites)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*[]entity.Review)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(int) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idSites)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// InsertReview provides a mock function with given fields: review
+func (_m *IRepositoryReview) InsertReview(review entity.Review) (*entity.Review, error) <span class="cov0" title="0">{
+        ret := _m.Called(review)
+
+        var r0 *entity.Review
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Review) (*entity.Review, error)); ok </span><span class="cov0" title="0">{
+                return rf(review)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entity.Review) *entity.Review); ok </span><span class="cov0" title="0">{
+                r0 = rf(review)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*entity.Review)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entity.Review) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(review)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositoryReview interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositoryReview creates a new instance of IRepositoryReview. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositoryReview(t mockConstructorTestingTNewIRepositoryReview) *IRepositoryReview <span class="cov0" title="0">{
+        mock := &amp;IRepositoryReview{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file64" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-sites/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositorySites is an autogenerated mock type for the IRepositorySites type
+type IRepositorySites struct {
+        mock.Mock
+}
+
+// DeleteSites provides a mock function with given fields: idSites
+func (_m *IRepositorySites) DeleteSites(idSites int) error <span class="cov0" title="0">{
+        ret := _m.Called(idSites)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idSites)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov0" title="0">return r0</span>
+}
+
+// FindOneSites provides a mock function with given fields: idSites
+func (_m *IRepositorySites) FindOneSites(idSites int) (*entity.Sites, error) <span class="cov0" title="0">{
+        ret := _m.Called(idSites)
+
+        var r0 *entity.Sites
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int) (*entity.Sites, error)); ok </span><span class="cov0" title="0">{
+                return rf(idSites)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(int) *entity.Sites); ok </span><span class="cov0" title="0">{
+                r0 = rf(idSites)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*entity.Sites)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(int) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idSites)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// FindSites provides a mock function with given fields: filter
+func (_m *IRepositorySites) FindSites(filter map[string]interface{}) (*[]entity.Sites, error) <span class="cov0" title="0">{
+        ret := _m.Called(filter)
+
+        var r0 *[]entity.Sites
+        var r1 error
+        if rf, ok := ret.Get(0).(func(map[string]interface{}) (*[]entity.Sites, error)); ok </span><span class="cov0" title="0">{
+                return rf(filter)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(map[string]interface{}) *[]entity.Sites); ok </span><span class="cov0" title="0">{
+                r0 = rf(filter)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*[]entity.Sites)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(map[string]interface{}) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(filter)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// InsertSites provides a mock function with given fields: review
+func (_m *IRepositorySites) InsertSites(review entity.Sites) (*entity.Sites, error) <span class="cov0" title="0">{
+        ret := _m.Called(review)
+
+        var r0 *entity.Sites
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Sites) (*entity.Sites, error)); ok </span><span class="cov0" title="0">{
+                return rf(review)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entity.Sites) *entity.Sites); ok </span><span class="cov0" title="0">{
+                r0 = rf(review)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*entity.Sites)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entity.Sites) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(review)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositorySites interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositorySites creates a new instance of IRepositorySites. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositorySites(t mockConstructorTestingTNewIRepositorySites) *IRepositorySites <span class="cov0" title="0">{
+        mock := &amp;IRepositorySites{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file65" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-sites/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositorySubCategory is an autogenerated mock type for the IRepositorySubCategory type
+type IRepositorySubCategory struct {
+        mock.Mock
+}
+
+// DeleteSubcategory provides a mock function with given fields: idCategory, idSubcategory
+func (_m *IRepositorySubCategory) DeleteSubcategory(idCategory int, idSubcategory int) error <span class="cov0" title="0">{
+        ret := _m.Called(idCategory, idSubcategory)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int, int) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idCategory, idSubcategory)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov0" title="0">return r0</span>
+}
+
+// FindOneSubcategory provides a mock function with given fields: idSubCategory
+func (_m *IRepositorySubCategory) FindOneSubcategory(idSubCategory int) (*entity.Subcategory, error) <span class="cov0" title="0">{
+        ret := _m.Called(idSubCategory)
+
+        var r0 *entity.Subcategory
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int) (*entity.Subcategory, error)); ok </span><span class="cov0" title="0">{
+                return rf(idSubCategory)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(int) *entity.Subcategory); ok </span><span class="cov0" title="0">{
+                r0 = rf(idSubCategory)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*entity.Subcategory)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(int) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idSubCategory)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// FindSubcategory provides a mock function with given fields: idCategory
+func (_m *IRepositorySubCategory) FindSubcategory(idCategory int) (*[]entity.Subcategory, error) <span class="cov0" title="0">{
+        ret := _m.Called(idCategory)
+
+        var r0 *[]entity.Subcategory
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int) (*[]entity.Subcategory, error)); ok </span><span class="cov0" title="0">{
+                return rf(idCategory)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(int) *[]entity.Subcategory); ok </span><span class="cov0" title="0">{
+                r0 = rf(idCategory)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*[]entity.Subcategory)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(int) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idCategory)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// InsertSubcategory provides a mock function with given fields: review
+func (_m *IRepositorySubCategory) InsertSubcategory(review entity.Subcategory) (*entity.Subcategory, error) <span class="cov0" title="0">{
+        ret := _m.Called(review)
+
+        var r0 *entity.Subcategory
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Subcategory) (*entity.Subcategory, error)); ok </span><span class="cov0" title="0">{
+                return rf(review)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entity.Subcategory) *entity.Subcategory); ok </span><span class="cov0" title="0">{
+                r0 = rf(review)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*entity.Subcategory)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entity.Subcategory) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(review)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositorySubCategory interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositorySubCategory creates a new instance of IRepositorySubCategory. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositorySubCategory(t mockConstructorTestingTNewIRepositorySubCategory) *IRepositorySubCategory <span class="cov0" title="0">{
+        mock := &amp;IRepositorySubCategory{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>
